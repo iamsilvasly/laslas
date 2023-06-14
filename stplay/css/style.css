@@ -117,6 +117,17 @@ body{
   margin: 0 auto;
 }
 
+@keyframes slide{
+  from{
+    transform: translateX(-300px);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+.slide{
+  animation: slide 1s ease in;
+}
 .menu {
   display: flex;
   flex-direction: row; 
@@ -127,13 +138,23 @@ body{
   padding: 0;
   justify-content: space-between;
   color: white;
+ 
+}
+.navrad{
+  border-radius: 20px;
+  background-color:#032b5f;
+  display: flex;
+  justify-content: space-around;
+  width: 100vh;
 }
 
 .menu > li {
   margin: 0 1rem;
   overflow: hidden;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
+  cursor: pointer;
+
 }
 
 .menu-button-container {
@@ -502,6 +523,7 @@ section{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 100px;
     
   }
   .card{
@@ -807,6 +829,9 @@ footer{
 
   /*Stying for small screens*/
 @media screen and (max-width: 520px){
+  .navrad{
+    display: none;
+  }
   .mobile-adjust{
     /* justify-content: left;
     align-items: flex-start; */ 
@@ -954,7 +979,7 @@ footer{
   align-items: center;
   /* justify-content:space-between ; */
   color: #FFF;
-  width: 100vh;
+  width: 99vh;
   padding: 1em;
   /* height: 50px; */
   /* margin: 0 auto; */
@@ -991,11 +1016,12 @@ footer{
     justify-content: center;
     align-items: center;
     margin-left: 90px;
+    padding-top: 100px;
     /* flex-wrap: wrap; */
 }
 .sectioned{
   width: 90%;
-  /* padding-top: 10px; */
+  padding-top: 10px;
   margin-left: 65px;
 }
 .heading{
@@ -1024,7 +1050,7 @@ table{
    /* height: 900px; */
 
    height: fit-content;
-   /* width: fit-content; */
+   width: fit-content;
    display: flex;
    /* margin-right: 1%; */
    /* margin-left: 1%; */
@@ -1036,7 +1062,7 @@ table{
   align-items: center;
   display: inline;
   border-radius: 10px;
-  padding: 30px;
+  padding: 20px;
   position: sticky;
   
 }
@@ -1067,8 +1093,34 @@ table{
 }
 .rateimg{
   /* display: list-item; */
-  position: sticky;
+  position:relative;
   height: 300px;
+  top: 10px;
+  left:-50px;
 
+}
+}
+
+
+@media screen and (min-width: 999px) and (max-width: 1032px){
+
+ .rateimg{
+  /* display: list-item; */
+  position:relative;
+  height: 300px;
+  top: 10px;
+  left:-50px;
+
+}
+.container{
+  display:grid;
+  grid-template-columns: 30% 31% 33%;
+  gap: 90px;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 90px; */
+  margin-right: 50px;
+  padding-top: 150px;
+  
 }
 }
